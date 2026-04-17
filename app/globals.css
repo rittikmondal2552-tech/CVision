@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-serif), ui-serif, Georgia, serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::selection {
+  background: rgba(92, 114, 133, 0.25);
+  color: #000;
+}
+
+.resume-a4 {
+  width: 210mm;
+  min-height: 297mm;
+  background: #ffffff;
+  /* Very soft, elegant shadow typical of premium interfaces */
+  box-shadow: 0 12px 48px -12px rgba(0, 0, 0, 0.05), 0 4px 12px -4px rgba(0, 0, 0, 0.02);
+}
+
+@media print {
+  .resume-a4 {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Subtle placeholder styling */
+textarea::placeholder {
+  color: #A09C94;
+  font-weight: 300;
+}
